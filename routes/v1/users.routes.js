@@ -14,7 +14,12 @@ router.route('/')
 
     usersController.saveAUser
 
-);
+)
+.patch(
+
+    usersController.updateAllUser
+    
+)
 
 router
 

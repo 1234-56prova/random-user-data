@@ -36,6 +36,7 @@ module.exports.updateUser = (req, res) => {
     const newData = users.find(user => user.id === Number(id));
 
     newData.id = id;
+
     newData.name = req.body.name;
 
     res.send(newData);
@@ -45,8 +46,6 @@ module.exports.updateUser = (req, res) => {
 module.exports.deleteUser = (req, res, next) => {
 
     const { id } = req.params;
-
-    const filter = { _id: id };
 
     users.filter(user => user.id !== Number(id));
 
